@@ -11,8 +11,8 @@ namespace MailProgramming
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
-		}
+            MainPage = new NavigationPage(root: new MainPage());
+        }
 
 		protected override void OnStart ()
 		{
