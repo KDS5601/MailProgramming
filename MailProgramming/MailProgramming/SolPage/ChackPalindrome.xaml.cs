@@ -14,7 +14,7 @@ namespace MailProgramming
     {
         public ChackPalindrome()
         {
-            NavigationPage.SetHasBackButton(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             backButton.Clicked += async (sender, e) =>
             await Navigation.PopAsync();

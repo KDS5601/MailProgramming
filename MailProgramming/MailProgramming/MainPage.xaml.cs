@@ -14,13 +14,16 @@ namespace MailProgramming
 	{
 		public MainPage ()
 		{
-            NavigationPage.SetHasBackButton(this, false);
-			InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
+            InitializeComponent ();
 
             NaviButton toChackPalindrome = new NaviButton("숫자 회문 체크");
             toChackPalindrome.Clicked += async (sender, e) => await Navigation.PushAsync(new ChackPalindrome());
+            NaviButton toFibonacciSQ = new NaviButton("짝수 피보나치수열 합");
+            toFibonacciSQ.Clicked += async (sender, e) => await Navigation.PushAsync(new FibonacciSQ());
 
             contentStack.Children.Add(toChackPalindrome);
+            contentStack.Children.Add(toFibonacciSQ);
         }
 
         class NaviButton : Button

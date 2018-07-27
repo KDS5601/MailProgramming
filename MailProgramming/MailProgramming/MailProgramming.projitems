@@ -23,6 +23,10 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SolPage\FibonacciSQ.xaml.cs">
+      <DependentUpon>FibonacciSQ.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
@@ -37,6 +41,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)SolPage\" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolPage\FibonacciSQ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

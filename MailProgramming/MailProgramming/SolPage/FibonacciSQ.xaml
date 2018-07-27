@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MailProgramming.FibonacciSQ">
+    <ContentPage.Content>
+        <StackLayout
+        Orientation="Vertical"
+        VerticalOptions="FillAndExpand">
+            <Label
+                x:Name="inputLabel"
+                BackgroundColor="WhiteSmoke"
+                TextColor="Black"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="End"
+                FontSize="Medium"
+                HeightRequest="30"/>
+            <Label
+                Text="fibonacciSQ"
+                FontSize="Small"/>
+            <ScrollView
+                Orientation="Horizontal">
+                <Label
+                    x:Name="fibonacciSQLabel"
+                    BackgroundColor="WhiteSmoke"
+                    Text="0"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Medium"
+                    HeightRequest="30"/>
+            </ScrollView>
+            <Label
+                Text="evenFibonacciSQ"
+                FontSize="Small"/>
+            <ScrollView
+                Orientation="Horizontal">
+                <Label
+                    x:Name="evenFibonacciSQLabel"
+                    BackgroundColor="WhiteSmoke"
+                    Text="0"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Medium"
+                    HeightRequest="30"/>
+            </ScrollView>
+            <Label
+                Text="SUM EvenFibonacciSQ"
+                FontSize="Small"/>
+            <ScrollView
+                Orientation="Horizontal">
+                <Label
+                    x:Name="sumNumberLabel"
+                    BackgroundColor="WhiteSmoke"
+                    Text="0"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Medium"
+                    HeightRequest="30"/>
+            </ScrollView>
+            <Grid 
+                x:Name="inputNumbersGrid"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                MinimumHeightRequest="400">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Button
+                x:Name="backButton"
+                HeightRequest="30"
+                VerticalOptions="FillAndExpand"
+                Text="Go Back"
+                FontSize="Large"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
