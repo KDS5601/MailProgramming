@@ -3,10 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MailProgramming.FindSum">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Entry
+                Keyboard="Numeric"
+                MaxLength="10"
+                IsSpellCheckEnabled="false"
+                Placeholder="배열 원소 입력"/>
+            <Label
+                Text="입력된 배열"/>
+            <ScrollView
+                Orientation="Horizontal">
+                <Label
+                    x:Name="ArrayLabel"/>
+            </ScrollView>
+            <Entry
+                Keyboard="Numeric"
+                MaxLength="10"
+                IsSpellCheckEnabled="false"
+                Placeholder="찾을 숫자 입력"/>
+            <Label
+                x:Name="FindNumLabel"
+                Text="찾을 숫자 : "/>
+            <Label
+                Text="Output"/>
+            <Label
+                x:Name="OutputLabel"/>
+            <!--Empty Space-->
+            <Label
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
+            <Button
+                x:Name="backButton"
+                Text="Go Back"
+                HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

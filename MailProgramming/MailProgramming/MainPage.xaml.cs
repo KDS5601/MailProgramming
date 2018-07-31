@@ -21,9 +21,12 @@ namespace MailProgramming
             toChackPalindrome.Clicked += async (sender, e) => await Navigation.PushAsync(new ChackPalindrome());
             NaviButton toFibonacciSQ = new NaviButton("짝수 피보나치수열 합");
             toFibonacciSQ.Clicked += async (sender, e) => await Navigation.PushAsync(new FibonacciSQ());
+            NaviButton toFindSum = new NaviButton("배열중 합이 되는 숫자 찾기");
+            toFindSum.Clicked += async (sender, e) => await Navigation.PushAsync(new FindSum());
 
             contentStack.Children.Add(toChackPalindrome);
             contentStack.Children.Add(toFibonacciSQ);
+            contentStack.Children.Add(toFindSum);
         }
 
         class NaviButton : Button
