@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SolClass\FindSum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SolPage\ChackPalindrome.xaml.cs">
       <DependentUpon>ChackPalindrome.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -55,8 +56,5 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)SolClass\" />
   </ItemGroup>
 </Project>

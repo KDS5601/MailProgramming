@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MailProgramming.SolClass;
+
+using static MailProgramming.SolClass.FindSum;
 
 namespace MailProgramming
 {
@@ -29,73 +32,6 @@ namespace MailProgramming
                 ((Entry)sender).Text = null;
             };
         }
-
-        public (bool result, int first, int seceond) FindIndex(ref List<int> intList_r, ref int targetNumber_p)
-        {
-            int a = 0, b = 0;
-            bool result = false;
-
-            if (intList_r.Count == 1)
-            {
-                return (false, 0, 0);
-            }
-
-            QuickSorting(ref intList_r);
-
-            for (int i = 0; i < intList_r.Count - 2 ; ++i )
-            {
-                for (int j = 0; j < intList_r.Count -1; ++j)
-                {
-                    if (i + j == targetNumber_p)
-                    {
-                        result = true;
-                        a = i; b = j;
-                        goto ForOut;
-                    }
-                }
-            }
-            return (result, a, b);
-            ForOut:;
-
-            return (result, a, b);
-        }
-
-        private void QuickSorting(ref List<int> intList_r, int left, int right)
-        {
-            int i = left, j = right;
-            int pivot = intList_r[(left + right) / 2];
-            int temp;
-
-            do
-            {
-                while (intList_r[i] < pivot)
-                    i++;
-                while (intList_r[j] > pivot)
-                    j--;
-                if (i <= j)
-                {
-                    temp = intList_r[i];
-                    intList_r[i] = intList_r[j];
-                    intList_r[j] = temp;
-                    i++;
-                    j--;
-                }
-            } while (i <= j);
-            if (left < j)
-                QuickSorting(ref intList_r, left, j);
-
-            if (i < right)
-                QuickSorting(ref intList_r, i, right);
-        }
-
-        private void QuickSorting(ref List<int> intList_r)
-        {
-            int left = intList_r[0];
-            int right = intList_r[intList_r.Count - 1];
-
-            QuickSorting(ref intList_r, left, right);
-        }
-
         private void EntryTextChanged(object sender, TextChangedEventArgs e)
         {
             if (!(int.TryParse(e.NewTextValue, out int i)))
@@ -103,5 +39,6 @@ namespace MailProgramming
                 ((Entry)sender).Text = e.OldTextValue;
             }
         }
+
     }
 }
