@@ -9,18 +9,28 @@ using Xamarin.Forms.Xaml;
 
 namespace MailProgramming
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FindSum : ContentPage
-	{
-		public FindSum ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class FindSum : ContentPage
+    {
+        public FindSum()
+        {
+            List<int> intList = new List<int>();
+
+            InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             backButton.Clicked += async (sender, e) =>
             await Navigation.PopAsync();
+
+            ArrEntry.TextChanged += EntryTextChanged;
+            FindNumEntry.TextChanged += EntryTextChanged;
+
+            ArrEntry.Completed += (sender, e) =>
+            {
+                ((Entry)sender).Text = null;
+            };
         }
 
-        public (bool result, int first, int seceond) FindIndex(ref List<int> intList_r)
+        public (bool result, int first, int seceond) FindIndex(ref List<int> intList_r, ref int targetNumber_p)
         {
             int a = 0, b = 0;
             bool result = false;
@@ -32,12 +42,25 @@ namespace MailProgramming
 
             QuickSorting(ref intList_r);
 
-
+            for (int i = 0; i < intList_r.Count - 2 ; ++i )
+            {
+                for (int j = 0; j < intList_r.Count -1; ++j)
+                {
+                    if (i + j == targetNumber_p)
+                    {
+                        result = true;
+                        a = i; b = j;
+                        goto ForOut;
+                    }
+                }
+            }
+            return (result, a, b);
+            ForOut:;
 
             return (result, a, b);
         }
 
-        public void QuickSorting(ref List<int> intList_r, int left, int right)
+        private void QuickSorting(ref List<int> intList_r, int left, int right)
         {
             int i = left, j = right;
             int pivot = intList_r[(left + right) / 2];
@@ -65,14 +88,20 @@ namespace MailProgramming
                 QuickSorting(ref intList_r, i, right);
         }
 
-        public void QuickSorting(ref List<int> intList_r)
+        private void QuickSorting(ref List<int> intList_r)
         {
             int left = intList_r[0];
             int right = intList_r[intList_r.Count - 1];
 
-            QuickSorting(ref intList_r, left, right);  
+            QuickSorting(ref intList_r, left, right);
+        }
+
+        private void EntryTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!(int.TryParse(e.NewTextValue, out int i)))
+            {
+                ((Entry)sender).Text = e.OldTextValue;
+            }
         }
     }
-    
-
 }

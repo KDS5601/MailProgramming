@@ -8,6 +8,7 @@
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
             <Entry
+                x:Name="ArrEntry"
                 Keyboard="Numeric"
                 MaxLength="10"
                 IsSpellCheckEnabled="false"
@@ -20,6 +21,7 @@
                     x:Name="ArrayLabel"/>
             </ScrollView>
             <Entry
+                x:Name="FindNumEntry"
                 Keyboard="Numeric"
                 MaxLength="10"
                 IsSpellCheckEnabled="false"
