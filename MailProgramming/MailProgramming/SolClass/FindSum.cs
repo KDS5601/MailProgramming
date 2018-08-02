@@ -20,7 +20,7 @@ namespace MailProgramming.SolClass
 
             for (int i = 0; i < intList_r.Count - 1; ++i)
             {
-                for (int j = 0; j < intList_r.Count; ++j)
+                for (int j = 1; j < intList_r.Count; ++j)
                 {
                     if (intList_r[i] + intList_r[j] == targetNumber_p)
                     {
