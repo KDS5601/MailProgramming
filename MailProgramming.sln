@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailProgramming.UWP", "Mail
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MailProgramming", "MailProgramming\MailProgramming\MailProgramming.shproj", "{184C37DE-9F76-47BE-8195-C229914F5B81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailConsole", "MailConsole\MailConsole.csproj", "{92724D33-B682-4AE5-BE7D-8581F4579559}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailConsole", "MailConsole\MailConsole.csproj", "{92724D33-B682-4AE5-BE7D-8581F4579559}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

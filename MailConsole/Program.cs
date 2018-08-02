@@ -14,7 +14,7 @@ namespace MailConsole
         {
             List<int> intList = new List<int>();
             int findNum = 0;
-            FindSum finder = new FindSum();
+            SumFinder finder = new SumFinder();
 
             Console.WriteLine("수열의 원소를 입력하시오. 공란 입력시 다음단계로 넘어갑니다.");
             for (; ; )

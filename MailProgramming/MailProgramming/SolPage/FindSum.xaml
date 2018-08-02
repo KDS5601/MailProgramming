@@ -38,6 +38,10 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"/>
             <Button
+                x:Name="resetButton"
+                Text="초기화"
+                HorizontalOptions="FillAndExpand"/>
+            <Button
                 x:Name="backButton"
                 Text="Go Back"
                 HorizontalOptions="FillAndExpand"/>
