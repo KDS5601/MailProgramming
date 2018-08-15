@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using MailProgramming.SolPage;
+
 namespace MailProgramming
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -23,10 +25,13 @@ namespace MailProgramming
             toFibonacciSQ.Clicked += async (sender, e) => await Navigation.PushAsync(new FibonacciSQ());
             NaviButton toFindSum = new NaviButton("배열중 합이 되는 숫자 찾기");
             toFindSum.Clicked += async (sender, e) => await Navigation.PushAsync(new FindSum());
+            NaviButton toStringReverseForEachWordPage = new NaviButton("문자열 단어별로 뒤집기");
+            toStringReverseForEachWordPage.Clicked += async (sender, e) => await Navigation.PushAsync(new StringReverseForEachWordPage());
 
             contentStack.Children.Add(toChackPalindrome);
             contentStack.Children.Add(toFibonacciSQ);
             contentStack.Children.Add(toFindSum);
+            contentStack.Children.Add(toStringReverseForEachWordPage);
         }
 
         class NaviButton : Button

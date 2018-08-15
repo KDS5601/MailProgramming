@@ -16,6 +16,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SolClass\FindSum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SolClass\StringReverseForEachWord.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SolPage\ChackPalindrome.xaml.cs">
       <DependentUpon>ChackPalindrome.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -30,6 +31,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SolPage\FindSum.xaml.cs">
       <DependentUpon>FindSum.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SolPage\StringReverseForEachWordPage.xaml.cs">
+      <DependentUpon>StringReverseForEachWordPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -53,6 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolPage\FindSum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolPage\StringReverseForEachWordPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
