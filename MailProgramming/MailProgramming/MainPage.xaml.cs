@@ -37,7 +37,7 @@ namespace MailProgramming
             contentStack.Children.Add(toSeconderyLargeNumberPage);
         }
 
-        class NaviButton : Button
+        private sealed class NaviButton : Button
         {
             public NaviButton(string Name_p)
             {
