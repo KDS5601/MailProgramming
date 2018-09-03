@@ -11,13 +11,13 @@ using MailProgramming.SolPage;
 
 namespace MailProgramming
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainPage : ContentPage
-	{
-		public MainPage ()
-		{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
             NavigationPage.SetHasNavigationBar(this, false);
-            InitializeComponent ();
+            InitializeComponent();
 
             NaviButton toChackPalindrome = new NaviButton("숫자 회문 체크");
             toChackPalindrome.Clicked += async (sender, e) => await Navigation.PushAsync(new ChackPalindrome());
@@ -27,11 +27,14 @@ namespace MailProgramming
             toFindSum.Clicked += async (sender, e) => await Navigation.PushAsync(new FindSum());
             NaviButton toStringReverseForEachWordPage = new NaviButton("문자열 단어별로 뒤집기");
             toStringReverseForEachWordPage.Clicked += async (sender, e) => await Navigation.PushAsync(new StringReverseForEachWordPage());
+            NaviButton toSeconderyLargeNumberPage = new NaviButton("배열에서 두번째로 큰 숫자 찾기");
+            toSeconderyLargeNumberPage.Clicked += async (sender, e) => await Navigation.PushAsync(new SeconderyLargeNumberPage());
 
             contentStack.Children.Add(toChackPalindrome);
             contentStack.Children.Add(toFibonacciSQ);
             contentStack.Children.Add(toFindSum);
             contentStack.Children.Add(toStringReverseForEachWordPage);
+            contentStack.Children.Add(toSeconderyLargeNumberPage);
         }
 
         class NaviButton : Button

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MailProgramming.SolPage.SeconderyLargeNumberPage">
+    <ContentPage.Content>
+        <StackLayout            
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Entry
+                x:Name="ArrEntry"
+                Keyboard="Numeric"
+                MaxLength="10"
+                IsSpellCheckEnabled="false"
+                Placeholder="배열 원소 입력"/>
+            <Label
+                Text="입력된 배열"/>
+            <ScrollView
+                Orientation="Horizontal">
+                <Label
+                    x:Name="ArrayLabel"/>
+            </ScrollView>
+            <Label
+                Text="Output"/>
+            <Label
+                x:Name="OutputLabel"/>
+            <!--Empty Space-->
+            <Label
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
+            <Button
+                x:Name="resetButton"
+                Text="초기화"
+                HorizontalOptions="FillAndExpand"/>
+            <Button
+                x:Name="backButton"
+                Text="Go Back"
+                HorizontalOptions="FillAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
