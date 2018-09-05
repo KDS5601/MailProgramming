@@ -12,9 +12,24 @@ namespace MailConsole
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            string myString = Console.ReadLine();
-            Console.WriteLine(StringReverseForEachWord.GetAndReverse(myString));
-            Console.ReadKey();
+            for (; ; )
+            {
+                string myString = Console.ReadLine();
+
+                List<char> myCharList = LongestSubstring.FindSubSting(ref myString);
+
+                if (myCharList != null)
+                {
+                    foreach (char i in myCharList)
+                    {
+                        Console.Write(i);
+                    }
+                }
+
+                Console.Write('\n');
+
+                Console.ReadKey();
+            }
         }
     }
 }

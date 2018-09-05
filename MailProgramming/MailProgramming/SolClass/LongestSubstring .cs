@@ -11,15 +11,72 @@ namespace MailProgramming.SolClass
 
     static class LongestSubstring
     {
-        static public void FindSubSting(string target_p)
+        static public List<char> FindSubSting(ref string target_p)
         {
-            int maxNumber = 0;
+            ///<summary>
+            ///정상 반환 : charList
+            ///오류 발생 : null
+            /// </summary>
+            /// 
+
             List<char> CharList = new List<char>();
+            List<char> LongChar = new List<char>();
 
-            foreach (char index in target_p)
+            //이하 방어코드
+            if (target_p == null || target_p.Length <= 1)
             {
-
+                return null;
             }
+
+            CharList.Add(target_p[0]);
+
+            for (int i = 1; i < target_p.Length; i++)
+            {
+                if (!OverLapChack(target_p[i], ref CharList))
+                {
+                    CharList.Clear();
+                }
+                else
+                {
+                    CharList.Add(target_p[i]);
+                }
+
+                if (CharList.Count >= LongChar.Count)
+                {
+                    LongChar.Clear();
+
+                    foreach (char index in CharList)
+                    {
+                        LongChar.Add(index);
+                    }
+                }
+            }
+
+            return LongChar;
+        }
+
+        static bool OverLapChack(char Index, ref List<char> CharList)
+        {
+            ///<summary>
+            /// 중복이 있거나 오류가 있을시 : false
+            /// 중복된 문자가 없을 경우 : true
+            /// </summary>
+            /// 
+
+            if (CharList == null)
+            {
+                return false;
+            }
+
+            foreach (char j in CharList)
+            {
+                if (j == Index)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
