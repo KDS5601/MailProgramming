@@ -29,12 +29,16 @@ namespace MailProgramming
             toStringReverseForEachWordPage.Clicked += async (sender, e) => await Navigation.PushAsync(new StringReverseForEachWordPage());
             NaviButton toSeconderyLargeNumberPage = new NaviButton("배열에서 두번째로 큰 숫자 찾기");
             toSeconderyLargeNumberPage.Clicked += async (sender, e) => await Navigation.PushAsync(new SeconderyLargeNumberPage());
+            NaviButton toSubStringPage = new NaviButton("문자 열 내에서 중복되지 않는 가장 긴 문자열");
+            toSubStringPage.Clicked += async (sender, e) => await Navigation.PushAsync(new SubStringPage());
+
 
             contentStack.Children.Add(toChackPalindrome);
             contentStack.Children.Add(toFibonacciSQ);
             contentStack.Children.Add(toFindSum);
             contentStack.Children.Add(toStringReverseForEachWordPage);
             contentStack.Children.Add(toSeconderyLargeNumberPage);
+            contentStack.Children.Add(toSubStringPage);
         }
 
         private sealed class NaviButton : Button

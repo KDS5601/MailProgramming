@@ -16,15 +16,7 @@ namespace MailConsole
             {
                 string myString = Console.ReadLine();
 
-                List<char> myCharList = LongestSubstring.FindSubSting(ref myString);
-
-                if (myCharList != null)
-                {
-                    foreach (char i in myCharList)
-                    {
-                        Console.Write(i);
-                    }
-                }
+                Console.WriteLine(LongestSubstring.FindSubSting(ref myString));
 
                 Console.Write('\n');
 

@@ -11,7 +11,7 @@ namespace MailProgramming.SolClass
 
     static class LongestSubstring
     {
-        static public List<char> FindSubSting(ref string target_p)
+        static public string FindSubSting(ref string target_p)
         {
             ///<summary>
             ///정상 반환 : charList
@@ -51,8 +51,7 @@ namespace MailProgramming.SolClass
                     }
                 }
             }
-
-            return LongChar;
+            return string.Concat(LongChar);
         }
 
         static bool OverLapChack(char Index, ref List<char> CharList)

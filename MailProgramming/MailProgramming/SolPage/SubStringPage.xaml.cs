@@ -25,7 +25,7 @@ namespace MailProgramming.SolPage
         {
             InputLabel.Text = myEntry.Text;
             string myString = myEntry.Text;
-            OutputLabel.Text = LongestSubstring.FindSubSting(ref myString).ToString();
+            OutputLabel.Text = LongestSubstring.FindSubSting(ref myString);
 
             myEntry.Text = null;
         }
